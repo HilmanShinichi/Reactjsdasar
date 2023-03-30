@@ -1,38 +1,36 @@
-.App {
+.cardtes {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 300px;
+  margin: 20px auto;
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 6px;
+}
+.cardtes img{
+  width:100%;
+  border: 1px solid rgba(0,0,0,0.15);
+
+}
+
+.cardtes:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.containertes {
+  padding: 2px 16px;
+}
+
+.containertes h2{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.containertes p {
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.countes{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ gap: 20px;
+ border-bottom: 1px solid rgba(0,0,0,0.15);
 }
