@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import './App.css';
 import { IoIosAddCircle, IoIosRemoveCircle } from "react-icons/io";
 function App(props) {
+  console.log(props)
 
 const handleInc = (evt) => {
   props.dispatch({
@@ -14,14 +15,22 @@ const handleDec = (evt) => {
     type: 'DECREMENT'
   })
 }
+  const handleIncH = (evt) => {
+    props.dispatch({
+      type: 'INCREMENTH', newHarga:5000
+    })
+}
+
+
 return (
   <div class="cardtes">
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Watermeloen.jpg/800px-Watermeloen.jpg"/>
   <div class="containertes">
     <h2><b>Semangka</b></h2>
     <p>Jumlah</p>
+    <p>Harga Rp : {props.harga}</p>
     <div className='countes'>
-    <div><button onClick={handleInc}><IoIosAddCircle/></button></div> 
+    <div><button onClick={handleInc}><IoIosAddCircle onClick={handleIncH}/></button></div> 
     <div>{props.count}</div>
     <div><button onClick={handleDec}><IoIosRemoveCircle/></button></div>
     </div>
@@ -34,7 +43,8 @@ return (
 }
 const mapStateToProps = (state) => {
   return {
-    count: state.count
+    count: state.count,
+    harga: state.harga
   }
 }
 export default connect(mapStateToProps)(App);

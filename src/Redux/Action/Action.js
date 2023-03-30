@@ -4,7 +4,11 @@ const incrementAction = {
   const decrementAction = {
     type: 'DECREMENT'
   }
+  const incrementHarga = {
+    type: 'INCREMENTH'
+  }
   export default {
     incrementAction,
-    decrementAction
+    decrementAction,
+    incrementHarga
   }
