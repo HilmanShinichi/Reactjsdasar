@@ -1,17 +1,23 @@
-import React from 'react'
+import React from "react";
+import "./HeaderComponent.css";
+import logo from '../../Asset/img/store.png'
 
 function HeaderComponent() {
   return (
-    <div>
-        <header>
-     <div class="container">
-       <div class="header-left">
-         <img src="https://prog-8.com/images/html/advanced/main_logo.png" alt="" class="logo"/>
-       </div>
-     </div>
-    </header>
+    <div className="auah">
+      <header>
+        <div class="containerhead">
+          <div class="header-left">
+            <img
+              src="https://ecs7.tokopedia.net/assets-tokopedia-lite/v2/zeus/production/e5b8438b.svg"
+              alt=""
+              class="logo"
+            />
+          </div>
+        </div>
+      </header>
     </div>
-  )
+  );
 }
 
-export default HeaderComponent
+export default HeaderComponent;
