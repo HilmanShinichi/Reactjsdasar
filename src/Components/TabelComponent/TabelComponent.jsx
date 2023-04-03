@@ -2,11 +2,14 @@ import React from 'react';
 import { connect } from 'react-redux'
 // import './App.css';
 import { IoIosAddCircle, IoIosRemoveCircle } from "react-icons/io";
+import { DataGrid } from '@mui/x-data-grid';
+import { Box } from '@mui/material';
 
 
 
 function TabelComponent(props) {
-    console.log(props)
+    console.log(props.rows)
+    
   
   const handleInc = (evt) => {
     props.dispatch({
@@ -25,23 +28,13 @@ function TabelComponent(props) {
   }
   
   
+  
   return (
     <>
-    <div class="cardtes">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Watermeloen.jpg/800px-Watermeloen.jpg"/>
-    <div class="containertes">
-      <h2><b>Semangka</b></h2>
-      <p>Jumlah</p>
-      <p>Harga Rp : {props.harga}</p>
-      <div className='countes'>
-      <div><button onClick={handleInc}><IoIosAddCircle onClick={handleIncH}/></button></div> 
-      <div>{props.count}</div>
-      <div><button onClick={handleDec}><IoIosRemoveCircle/></button></div>
-      </div>
-      <button type="button" class="btn btn-primary mt-4 ml-5">Beli</button>
-      <button type="button" class="btn btn-warning mt-4 ml-5">Keranjang</button>
+    <div style={{ height: 300, width: '100%' }}>
+      <DataGrid rows={props.rows} columns={props.columns} />
     </div>
-  </div>
+  
   </>
       
     );
@@ -50,7 +43,8 @@ function TabelComponent(props) {
     return {
       count: state.count,
       harga: state.harga,
-      rows:state.rows
+      rows:state.rows,
+      columns: state.columns
     }
   }
   export default connect(mapStateToProps)(TabelComponent);

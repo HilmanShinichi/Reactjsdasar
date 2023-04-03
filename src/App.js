@@ -54,6 +54,7 @@
 // export default connect(mapStateToProps)(App);
 import Redux from './Container/Redux'
 import Tabel from './Container/Tabel/Tabel'
+import TabelApi from './Container/TabelApi/TabelApi'
 
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
@@ -63,6 +64,7 @@ function App(){
   <Routes>
   <Route path='/tes' element={<Redux/>}/>
   <Route path='/Tabel' element={<Tabel/>}/>
+  <Route path='/Tabelapi' element={<TabelApi/>}/>
   </Routes>
 </Router>
   )
